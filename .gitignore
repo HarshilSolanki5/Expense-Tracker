@@ -1,0 +1,51 @@
+# Node / NPM
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Vite / build
+dist/
+.vite/
+*.local
+.cache/
+
+# Environment files (do NOT commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Test / coverage
+coverage/
+*.lcov
+
+# Misc
+.sass-cache
+.pnp.*
+.history
+*.tmp
+
+# eslint cache
+.eslintcache
+
+# macOS Finder / Spotlight
+.AppleDouble
+.LSOverride
+
+# Windows image thumbnails
+ehthumbs.db

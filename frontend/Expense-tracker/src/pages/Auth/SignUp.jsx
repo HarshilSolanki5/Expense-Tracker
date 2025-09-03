@@ -14,7 +14,24 @@ const SignUp = () => {
   const[error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSignUp = async (e) => {}
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
+    if(!fullName) {
+      setError("Please enter your full name");
+      return;
+    }
+    if(!validateEmail(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+    if(!password< 8) {
+      setError("Please enter a valid password");
+      return;
+    }
+    setError("");
+    //SignUp API call
+  };
 
   return (
     <AuthLayout>
@@ -50,9 +67,18 @@ const SignUp = () => {
               />
             </div>
           </div>
+          {error && <p className='text-xs text-red-500 pb-2.5'>{error}</p>}
+            <button type="submit" className='btn-primary'>
+              SIGN UP
+            </button>
+            <p className="text-[13px] text-slate-800 mt-3">
+              Already have an account?{" "}
+              <Link className='font-medium text-primary underline' to="/Login">
+                Login
+              </Link>
+            </p>
         </form>
       </div>
-
     </AuthLayout>
   )
 }
