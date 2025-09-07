@@ -2,12 +2,8 @@ import axios from "axios";
 import { BASE_URL } from "./apiPath";
 
 const axiosInstance = axios.create({
-  baseURL: BASE_URL,
-  timeout: 10000,
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true
 });
 
 // Request Interceptor
@@ -24,7 +20,6 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-// Response Interceptor
 // Response Interceptor
 axiosInstance.interceptors.response.use(
   (response) => {
