@@ -43,7 +43,8 @@ const App = () => {
 export default App;
 
 const Root = () => {
-  const isAuthenticated = !!localstorage.getItem("token");
+  console.log("Root component loaded");
+  const isAuthenticated = !!localStorage.getItem("token");
   return isAuthenticated ? ( 
   <Navigate to="/dashboard" /> 
   ) : ( 

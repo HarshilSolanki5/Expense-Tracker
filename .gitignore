@@ -49,3 +49,8 @@ coverage/
 
 # Windows image thumbnails
 ehthumbs.db
+
+# Ignore everything in uploads
+/backend/uploads/*
+# But keep the .gitkeep file
+!/backend/uploads/.gitkeep
